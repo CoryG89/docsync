@@ -25,7 +25,7 @@ The next paragraph has the same phrases, but now they are separated by two space
 Roses are red  
 Violets are blue
 
-Math is pretty hard, let's go shopping
+Math isn't hard so let's go shopping
 ------------------------
 
 In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
