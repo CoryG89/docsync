@@ -21,7 +21,7 @@ Roses are red
 Violets are blue
 
 Math is hard, let's go shopping
------------------------------
+-----------------------
 
 In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
 
