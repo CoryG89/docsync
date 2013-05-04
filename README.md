@@ -1,5 +1,5 @@
 docsync
-========
+=========
 
 Testing methods to sync README.md and other documentation selectively from master branch to gh-pages and have a GitHub Pages site that when created using a layout from the Automatic Page Generator will keep updated with the markdown in the master branch.
 
