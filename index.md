@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html>
+---
+layout: index
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Docsync : Testing methods to sync README.md and other documentation selectively from master branch to gh-pages." />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Docsync</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/CoryG89/docsync">View on GitHub</a>
-
-          <h1 id="project_title">Docsync</h1>
-          <h2 id="project_tagline">Testing methods to sync README.md and other documentation selectively from master branch to gh-pages.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/CoryG89/docsync/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/CoryG89/docsync/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>docsync</h1>
+<h1>docsync</h1>
 
 <p>Testing methods to sync README.md and other documentation selectively from master branch to gh-pages and have a GitHub Pages site that when created using a layout from the Automatic Page Generator will keep updated with the markdown in the master branch.</p>
 
@@ -179,18 +150,3 @@ as I should be in coming up with one.</p>
 
 <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from
 <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Docsync maintained by <a href="https://github.com/CoryG89">CoryG89</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
