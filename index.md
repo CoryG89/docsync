@@ -3,15 +3,14 @@ layout: readme
 ---
 
 
-docsync
-=============
+# docsync
 
 This is an example project demonstrating how to setup an easy configuration for
 keeping your `README.md` automatically synced with a GitHub Pages project
 page created using [**one of the great layouts**][1] available when using
 [**GitHub's Automatic Page Generator**][2].
 
-### Background
+## Background
 
 If you haven't set up a project page for your GitHub repository yet, then you
 can do so by following the [**instructions found here**][3]. GitHub will provide
@@ -22,14 +21,14 @@ that I wanted to use the `README.md` from my master branch, but I also wanted
 it so the project page to stay updated and in sync with the `README.md` 
 automatically.
 
-### Relative Links
+## Relative Links
 
 Here is a [**relative link to a doc file**][7] which should work on project page
 as well. Here is [**another relative link to a doc**][8], check out the
 [**GitHub Flavored Markup doc**][5] which shows off the stuff that will work if
 you use the `markup: redcarpet` option in `_config.yml`.
 
-### How to Easily Sync README.md to Project Page
+## How to Easily Sync README.md to Project Page
 
 This project contains a bash script which is used in your project as a 
 [**git hook**][4]. Git has support for scripts to hook into and execute when
