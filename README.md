@@ -21,8 +21,9 @@ automatically.
  - Here is a [**relative link to a doc file**][7] which should work on project
    page as well. 
  - Here is [**another relative link to a doc**][8].
- - Check out the [**GitHub Flavored Markup doc**][5] which shows off the markup
-   that will work if using the `markup: redcarpet` option in `_config.yml`.
+ - Check out the [**GitHub Flavored Markup doc**][5] which shows off the
+   markup that will work if using the `markup: redcarpet` option in
+   `_config.yml`.
 
 ## How to Easily Sync README.md to Project Page
 
@@ -40,15 +41,16 @@ will need bash it in your path. If you are running Git on Windows, this is in
 one of the layouts using the Automatic Page Generator and have set it up using
 the following instructions:
 
- 1. If you already have a `gh-pages` branch, create a backup in case you botch 
+ 1. If you already have a gh-pages branch, create a backup in case you botch 
     this setup.
- 2. If you don't already have a `gh-pages` branch go to your repostory page's
-    `Settings` tab and use the [**Automatic Page Generator**][2] to create
+ 2. If you don't already have a gh-pages branch go to your repostory page's
+    Settings tab and use the [**Automatic Page Generator**][2] to create
     it.
- 3. Change to your local repostory's directory and checkout the `gh-pages`
+ 3. Change to your local repostory's directory and checkout the gh-pages
     branch.
- 4. Create the directory `_layouts` and move `index.html` to `_layouts`.
- 5. Open `index.html` and locate rendered markdown content in the document.
+ 4. Create the directory `_layouts` within your gh-pages branch and move
+    `index.html` to the new directory.
+ 5. Open `index.html` and locate the HTML from the rendered markdown content.
     It is usually located between `<section>` tags or between `<article>`
     tags, delete this text and replace it with the text `{{ content }}`.
  6. Copy the `process-rel-links.js` file from the `docsync` directory to 
@@ -57,13 +59,13 @@ the following instructions:
     is only needed if jquery is not already included in your layout's
     `index.html` already.
 
-    `<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>`
-    `<script src="javascripts/process-rel-links.js" type="text/javascript"></script>`
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="javascripts/process-rel-links.js" type="text/javascript"></script>
 
  8. Copy the `index.html` file and use it to create two new files 
     `readme.html` and `docs.html`, these will be the two layouts we will
     use to render our `README.md` file and our other markdown documentation
-    in our `docs/*` in the `master` branch.
+    in our `docs/*` directory in the `master` branch.
  9. The `readme.html` file will use our base layout, so it will not need any
     modification. However, in order to make relative linking work right, we
     need to open `docs.html` and find the `link` and `script` tags where
