@@ -40,22 +40,40 @@ will need bash it in your path. If you are running Git on Windows, this is in
 one of the layouts using the Automatic Page Generator and have set it up using
 the following instructions:
 
- 1. `git clone https://github.com/CoryG89/READMEsync.git`
- 2. Open your local git repository and change to the `gh-pages` branch.
- 3. Create a backup of `gh-pages` in case you botch this setup.
- 3. Copy `_layouts` directory from READMEsync to your `gh-pages` branch.
- 4. Copy `_config.yml` from READMEsync to your `gh-pages` branch.
- 5. Change to `_layouts` directory and change the filename of the desired
-    layout to `default.html`.
- 6. Remove `index.html` from your `gh-pages` branch. Don't worry our
-    `post-commit` script will regenerate our index from your `README.md` in
-    your `master` branch.
- 7. Add and commit changes to `gh-pages`, and switch to `master` branch.
- 8. Copy `post-commit` script from READMEsync to your local repostory's
-    `.git/hooks` directory.
+ 1. If you already have a `gh-pages` branch, create a backup in case you botch       this setup.
+ 2. If you don't already have a `gh-pages` branch go to your repostory page's
+    `Settings` tab and use the [**Automatic Page Generator**][2] to create
+    it.
+ 3. Change to your local repostory's directory and checkout the `gh-pages`
+    branch.
+ 4. Create the directory `_layouts` and move `index.html` to `_layouts`.
+ 5. Open `index.html` and locate rendered markdown content in the document.
+    It is usually located between `<section>` tags or between `<article>`
+    tags, delete this text and replace it with the text `{{ content }}`.
+ 6. Copy the `process-rel-links.js` file from the `docsync` directory to the
+    in the `javascripts` directory.
+ 7. Add the following lines to your `index.html` file.
+    
+ 6. Copy the `index.html` file and use it to create two new files 
+    `readme.html` and `docs.html`, these will be the two layouts we will use
+    to render our `README.md` file and our other markdown documentation in
+    our `docs/*` in the `master` branch.
+ 7. The `readme.html` file will use our base layout, so it will not need any
+    modification. However, in order to make relative linking work right, we
+    need to open `docs.html` and find the `link` and `script` tags where
+    css and javascript files are loaded from the `stylesheets` and
+    `javascripts` directories. Because these pages will be in a `docs`
+    subdirectory we will have to prepend the text `../` to the path of each of
+    the assets.
+ 9. Add the following lines to y
+ 8. Add and commit changes to `gh-pages`, and switch to `master` branch.
+ 9. Copy the `post-commit` script found here in [**CoryG89/docsync**][1]
+    to your local repostiory's `.git/hooks` directory.
+
 
 That's it, now whenever you make a commit to the `master` branch, the
-`README.md` file will automatically be synced to your project page.
+`README.md` file and all the markdown in the `docs` directory of your master
+branch will be synced up with the  will automatically be synced to your project page.
 
 [1]: https://github.com/blog/1081-instantly-beautiful-project-pages
 [2]: https://help.github.com/articles/creating-pages-with-the-automatic-generator
