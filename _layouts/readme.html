@@ -9,16 +9,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $('a').each(function () {
-                var href = String($('this').attr('href'));
-                if (href.search('.md') > 0)
-                    $('this').attr('href', href.split('.md')[0]);
-            });
-        });
-    </script>
-
     <title>Docsync</title>
   </head>
 
@@ -54,7 +44,13 @@
       </footer>
     </div>
 
-    
-
+   <script>
+              $(function () {
+                  $('a[href$=".md"').each(function () {
+                      var href = String($('this').attr('href'));
+                      $('this').attr('href', href.split('.md')[0]);
+                  });
+              });
+    </script>
   </body>
 </html>
