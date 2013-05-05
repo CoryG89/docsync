@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: docs
 ---
 
 
