@@ -1,3 +1,3 @@
 function p1() {
-    ; // Do important project stuff here
+    ; // do important project stuff
 }
