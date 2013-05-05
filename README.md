@@ -1,14 +1,29 @@
 docsync
 =============
 
-Testing methods to sync README.md and other documentation selectively from master branch to gh-pages and have a GitHub Pages site that when created using a layout from the Automatic Page Generator will keep updated with the markdown in the master branch.
+Testing methods to sync README.md and other documentation selectively from
+master branch to gh-pages and have a GitHub Pages site that when created using
+a layout from the Automatic Page Generator will keep updated with the markdown
+in the master branch.
 
-The rest of this document a modified version of the [**example source**][4] for [**GitHub Flavored Markdown**][5] to use for testing:
+The rest of this document a modified version of the [**example source**][4] for
+[**GitHub Flavored Markdown**][5] to use for testing:
+
+### Relative Links
+
+Here is a [**relative link to a doc file**][6] which should work on project page
+as well.
+
+
+[4]: docs/source.txt
+[5]: http://github.github.com/github-flavored-markdown/
+[6]: docs/other.md
+
 
 GitHub Flavored Markdown
 ================================
 
-*View the [source of this content](docs/source.txt)*
+*View the [source of this content][4]*
 
 Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
 
