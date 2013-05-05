@@ -18,7 +18,7 @@ The rest of this document a modified version of the [**example source**][4] for
 
 Here is a [**relative link to a doc file**][6] which should work on project page
 as well. Here is [**another relative link to a doc**][7] that should work on
-both the project page and the github repo page.
+both the project page and the github repository page.
 
 GitHub Flavored Markdown
 ================================
