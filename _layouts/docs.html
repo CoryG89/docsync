@@ -46,12 +46,11 @@
 
     <script>
           $(function () {
-              $('a[href$=".md"').each(function () {
+              $('a[href$=".md"]').each(function () {
                   var href = String($('this').attr('href'));
                   $('this').attr('href', href.split('.md')[0]);
               });
           });
     </script>
-
   </body>
 </html>
