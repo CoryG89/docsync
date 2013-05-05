@@ -1,24 +1,13 @@
-docsync
-=============
+## Another Document in /docs/ directory
 
-Testing methods to sync README.md and other documentation selectively from
-master branch to gh-pages and have a GitHub Pages site that when created using
-a layout from the Automatic Page Generator will keep updated with the markdown
-in the master branch.
+Testing methods to sync README.md and other documentation selectively from master branch to gh-pages and have a GitHub Pages site that when created using a layout from the Automatic Page Generator will keep updated with the markdown in the master branch.
 
-The rest of this document a modified version of the [**example source**][4] for
-[**GitHub Flavored Markdown**][5] to use for testing:
-
-### Relative Links
-
-Here is a [**relative link to a doc file**][6] which should work on project page
-as well. Here is [**another relative link to a doc**][7] that should work on
-both the project page and the github repo page.
+The rest of this document a modified version of the [**example source**][4] for [**GitHub Flavored Markdown**][5] to use for testing:
 
 GitHub Flavored Markdown
 ================================
 
-*View the [source of this content][4]*
+*View the [source of this content](docs/source.txt)*
 
 Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
 
@@ -30,8 +19,8 @@ The next paragraph has the same phrases, but now they are separated by two space
 Roses are red  
 Violets are blue
 
-Math is very hard, so let's go shopping!
-------------------------
+Math is hard, let's go shopping
+-------------------------------
 
 In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
 
@@ -153,7 +142,3 @@ I get 10 times more traffic from [Google] [1] than from
   [1]: http://google.com/        "Google"
   [2]: http://search.yahoo.com/  "Yahoo Search"
   [3]: http://search.msn.com/    "MSN Search"
-  [4]: docs/source.txt
-  [5]: http://github.github.com/github-flavored-markdown/
-  [6]: docs/other.md
-  [7]: docs/another.md
