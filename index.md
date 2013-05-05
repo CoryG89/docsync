@@ -6,20 +6,6 @@ layout: readme
 docsync
 =============
 
-Testing methods to sync README.md and other documentation selectively from
-master branch to gh-pages and have a GitHub Pages site that when created using
-a layout from the Automatic Page Generator will keep updated with the markdown
-in the master branch.
-
-### Relative Links
-
-Here is a [**relative link to a doc file**][7] which should work on project page
-as well. Here is [**another relative link to a doc**][8], check out the
-[**GitHub Flavored Markup doc**][5] which shows off the stuff that will work if
-you use the `markup: redcarpet` option in `_config.yml`.
-
-# READMEsync
-
 This is an example project demonstrating how to setup an easy configuration for
 keeping your `README.md` automatically synced with a GitHub Pages project
 page created using [**one of the great layouts**][1] available when using
@@ -35,6 +21,13 @@ as the content in the layout. The problem I had with this in my project's is
 that I wanted to use the `README.md` from my master branch, but I also wanted
 it so the project page to stay updated and in sync with the `README.md` 
 automatically.
+
+### Relative Links
+
+Here is a [**relative link to a doc file**][7] which should work on project page
+as well. Here is [**another relative link to a doc**][8], check out the
+[**GitHub Flavored Markup doc**][5] which shows off the stuff that will work if
+you use the `markup: redcarpet` option in `_config.yml`.
 
 ### How to Easily Sync README.md to Project Page
 
