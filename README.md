@@ -40,7 +40,8 @@ will need bash it in your path. If you are running Git on Windows, this is in
 one of the layouts using the Automatic Page Generator and have set it up using
 the following instructions:
 
- 1. If you already have a `gh-pages` branch, create a backup in case you botch       this setup.
+ 1. If you already have a `gh-pages` branch, create a backup in case you botch 
+    this setup.
  2. If you don't already have a `gh-pages` branch go to your repostory page's
     `Settings` tab and use the [**Automatic Page Generator**][2] to create
     it.
@@ -52,8 +53,13 @@ the following instructions:
     tags, delete this text and replace it with the text `{{ content }}`.
  6. Copy the `process-rel-links.js` file from the `docsync` directory to the
     in the `javascripts` directory.
- 7. Add the following lines to your `index.html` file.
-    
+ 7. Add the following lines to your `index.html` file. the top jquery script is
+    only needed if jquery is not already included in your layout's `index.html`
+    already
+
+    `<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>`
+    `<script src="javascripts/process-rel-links.js" type="text/javascript"></script>`
+
  6. Copy the `index.html` file and use it to create two new files 
     `readme.html` and `docs.html`, these will be the two layouts we will use
     to render our `README.md` file and our other markdown documentation in
