@@ -14,12 +14,6 @@ The rest of this document a modified version of the [**example source**][4] for
 Here is a [**relative link to a doc file**][6] which should work on project page
 as well.
 
-
-[4]: docs/source.txt
-[5]: http://github.github.com/github-flavored-markdown/
-[6]: docs/other.md
-
-
 GitHub Flavored Markdown
 ================================
 
@@ -158,3 +152,6 @@ I get 10 times more traffic from [Google] [1] than from
   [1]: http://google.com/        "Google"
   [2]: http://search.yahoo.com/  "Yahoo Search"
   [3]: http://search.msn.com/    "MSN Search"
+  [4]: docs/source.txt
+  [5]: http://github.github.com/github-flavored-markdown/
+  [6]: docs/other.md
