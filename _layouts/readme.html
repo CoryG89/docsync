@@ -12,9 +12,9 @@
     <script>
         $(function () {
             $('a').each(function (i, e) {
-                var href = e.attr('href');
+                var href = $('this').attr('href');
                 if (href.search('.md') > 0)
-                    e.attr('href', href.split('.md')[0]);
+                    $('this').attr('href', href.split('.md')[0]);
             });
         });
     </script>
