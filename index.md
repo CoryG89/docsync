@@ -17,7 +17,8 @@ The rest of this document a modified version of the [**example source**][4] for
 ### Relative Links
 
 Here is a [**relative link to a doc file**][6] which should work on project page
-as well.
+as well. Here is [**another relative link to a doc**][7] that should work on
+both the project page and the github repo page.
 
 GitHub Flavored Markdown
 ================================
@@ -160,3 +161,4 @@ I get 10 times more traffic from [Google] [1] than from
   [4]: docs/source.txt
   [5]: http://github.github.com/github-flavored-markdown/
   [6]: docs/other.md
+  [7]: docs/another.md
