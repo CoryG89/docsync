@@ -46,46 +46,67 @@ will need bash it in your path. If you are running Git on Windows, this is in
 one of the layouts using the Automatic Page Generator and have set it up using
 the following instructions:
 
- 1. If you already have a gh-pages branch, create a backup in case you botch 
+ * If you already have a gh-pages branch, create a backup in case you botch 
     this setup.
- 2. If you don't already have a gh-pages branch go to your repostory page's
+ 
+* If you don't already have a gh-pages branch go to your repostory page's
     Settings tab and use the [**Automatic Page Generator**][2] to create
     it.
- 3. Change to your local repostory's directory and checkout the `gh-pages`
+
+ * Change to your local repostory's directory and checkout the `gh-pages`
     branch.
- 4. Create the directory `_layouts` within your gh-pages branch and move
-    `index.html` to the new directory.
- 5. Open `index.html` and locate the HTML from the rendered markdown content.
-    It is usually located between `<section>` tags or between `<article>`
-    tags, delete this text and replace it with the text `{{ content }}`.
- 6. Copy the `process-rel-links.js` file from the `docsync` directory to 
-    in the `javascripts` directory.
- 7. Add the following lines to your `index.html` file. The top jquery script
-    is only needed if jquery is not already included in your layout's
-    `index.html` already.
+
+ * Create a new file called `_config.yml` this is a file that will tell
+    jekyll how to build our site when it is pushed to GitHub Pages. Put the
+    following lines in the file
+
+    markdown: redcarpet
+    path: http://yourusername.github.io/reponame
+
+ * The above will simply tell jekyll to use the redcarpet style markdown which
+   means it will be parsed in the same way that GitHub does for their repo
+   pages. Also we are creating a global variable for the site called `path`.
+   This variable will be accessible from `site.path`.
+
+ * Copy the process-rel-links.js file from the docsync directory to your
+   gh-pages `javascripts` directory.
+
+ * Create the directory `_layouts` within your gh-pages branch if it is not
+   and move `index.html` to the new `_layouts` directory. 
+
+ * Open up `index.html` and locate the HTML from the rendered markdown in your
+   `README.md` file. This is usually between between `<section>` or
+   `<article>` tags. Delete this text and replace it with the text 
+   `{{ content }}`.
+
+ * Before closing `index.html`, you also need to locate the CSS from your
+   project page theme (should be a file in the `stylesheets` directory). You
+   need to prefix this and any other assets loaded from your site in this
+   HTML with `{{ site.path }}`.
+
+   For me this was a line towards the top:
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+   Which needed to be changed to
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.path }}/stylesheets/stylesheet.css">
+ 
+ * Add the following lines to your `index.html` file. The first line for
+   jQuery is only needed if jQuery is not already included in your layout's
+   `index.html` already.
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="javascripts/process-rel-links.js" type="text/javascript"></script>
+    <script src="{{site.path}}/javascripts/process-rel-links.js" type="text/javascript"></script>
 
- 8. Copy the `index.html` file and use it to create two new files 
-    `readme.html` and `docs.html`, these will be the two layouts we will
-    use to render our `README.md` file and our other markdown documentation
-    in our `docs/*` directory in the `master` branch.
- 9. The `readme.html` file will use our base layout, so it will not need any
-    modification. However, in order to make relative linking work right, we
-    need to open `docs.html` and find the `link` and `script` tags where
-    css and javascript files are loaded from the `stylesheets` and
-    `javascripts` directories. Because these pages will be in a `docs`
-    subdirectory we will have to prepend the text `../` to the path of each of
-    the assets.
- 10. Add and commit changes to `gh-pages`, and switch to `master` branch.
- 11. Copy the `post-commit` script found here in [**CoryG89/docsync**][1]
-     to your local repostiory's `.git/hooks` directory.
+ * Add and commit changes to `gh-pages`, and switch to `master` branch. Copy
+   the `post-commit` script found here in [**CoryG89/docsync**][1] to your 
+   local repostiory's `.git/hooks` directory.
 
 
 That's it, now whenever you make a commit to the `master` branch, the
 `README.md` file and all the markdown in the `docs` directory of your master
-branch will be synced up with the  will automatically be synced to your
+branch will be synced up with the will automatically be synced to your
 project page.
 
 [1]: https://github.com/blog/1081-instantly-beautiful-project-pages
