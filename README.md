@@ -96,7 +96,7 @@ the following instructions:
 
  * Add and commit changes to `gh-pages`, and switch to `master` branch. Copy
    the `post-commit` script found here in [**CoryG89/docsync**][1] to your 
-   local repostiory's `.git/hooks` directory.
+   local repository's `.git/hooks` directory.
 
 
 That's it, now whenever you make a commit to the `master` branch, the
