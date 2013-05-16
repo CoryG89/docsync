@@ -46,7 +46,7 @@ the following instructions:
  2. If you don't already have a gh-pages branch go to your repostory page's
     Settings tab and use the [**Automatic Page Generator**][2] to create
     it.
- 3. Change to your local repostory's directory and checkout the gh-pages
+ 3. Change to your local repostory's directory and checkout the `gh-pages`
     branch.
  4. Create the directory `_layouts` within your gh-pages branch and move
     `index.html` to the new directory.
