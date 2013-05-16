@@ -1,3 +1,6 @@
+---
+---
+
 # docsync
 
 This is an example project demonstrating how to setup an easy configuration for
