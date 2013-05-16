@@ -1,5 +1,7 @@
 ---
+layout: readme
 ---
+
 
 # docsync
 
