@@ -61,7 +61,7 @@ the following instructions:
 
     ```
     markdown: redcarpet
-    path: http://yourusername.github.io/reponame`
+    path: http://yourusername.github.io/reponame
     ```
 
  * The above will simply tell jekyll to use the redcarpet style markdown which
