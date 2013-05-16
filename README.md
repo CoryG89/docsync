@@ -55,8 +55,10 @@ the following instructions:
     jekyll how to build our site when it is pushed to GitHub Pages. Put the
     following lines in the file
 
+    ```
     markdown: redcarpet
     path: http://yourusername.github.io/reponame
+    ```
 
  * The above will simply tell jekyll to use the redcarpet style markdown which
    means it will be parsed in the same way that GitHub does for their repo
@@ -81,18 +83,24 @@ the following instructions:
 
    For me this was a line towards the top:
 
-    `<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">`
+    ```
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    ```
 
    Which needed to be changed to
 
-    `<link rel="stylesheet" type="text/css" media="screen" href="{{ site.path }}/stylesheets/stylesheet.css">`
+    ```
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.path }}/stylesheets/stylesheet.css">`
+    ```
  
  * Add the following lines to your `index.html` file. The first line for
    jQuery is only needed if jQuery is not already included in your layout's
    `index.html` already.
 
-    `<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    ```
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="{{site.path}}/javascripts/process-rel-links.js" type="text/javascript"></script>`
+    ```
 
  * Add and commit changes to `gh-pages`, and switch to `master` branch. Copy
    the `post-commit` script found here in [**CoryG89/docsync**][1] to your 
