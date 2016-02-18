@@ -22,17 +22,24 @@ if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
 	git add index.md
 	git commit -a -m "Sync README.md in master branch to index.md in gh-pages"
 	
-	# Sync the markdown files in the docs/* directory
-	###################################################################
-	git checkout master -- docs
-	FILES=docs/*
-	for file in $FILES
-	do
-		echo -e $LAYOUT_PREFIX | cat - "$file" > temp && mv temp "$file"
-	done
-
-	git add docs
-	git commit -a -m "Sync docs from master branch to docs gh-pages directory"
+        # Sync the markdown files in the following array of directories
+        ###################################################################
+        # eg; dirs=(dir1 dir2 dir3)
+	dirs=(docs)
+        for dir in "${dirs[@]}"; do
+           git checkout master -- $dir
+           if test "$(ls -A "$dir")"; then
+              FILES=$dir/*.md
+              for file in $FILES
+                 do
+                   echo -e $LAYOUT_PREFIX | cat - "$file" > temp && mv temp "$file"
+                done
+              git add $dir
+              git commit -a -m "Sync $dir from master branch to $dir gh-pages directory"
+           else
+              echo "The directory $dir is empty '(or non-existent)'"
+           fi
+        done
 
 	# Uncomment the following push if you want to auto push to
 	# the gh-pages branch whenever you commit to master locally.
